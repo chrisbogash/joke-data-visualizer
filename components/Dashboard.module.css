@@ -1,0 +1,510 @@
+/* Upload + stats panels, matching the comedy-club theme in pages/index.module.css */
+
+.panel {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 0 48px;
+}
+
+.sectionTitle {
+  font-family: "Bangers", "Comic Sans MS", cursive;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  font-size: 32px;
+  line-height: 36px;
+  color: #ffd23f;
+  margin: 8px 0 16px;
+}
+
+.card {
+  background: #1e0b3d;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 16px;
+  padding: 16px 18px;
+  min-width: 0;
+}
+
+.cardTitle {
+  margin: 0 0 4px;
+  font-size: 17px;
+  color: #f5f3ff;
+}
+
+.muted {
+  color: #c4b5fd;
+  margin: 4px 0 12px;
+}
+
+.muted code,
+.card code {
+  background: rgba(167, 139, 250, 0.18);
+  color: #ffd23f;
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.link {
+  color: #ffd23f;
+  font-weight: bold;
+}
+
+/* ---------- Upload ---------- */
+
+.formatIntro {
+  margin: 0 0 8px;
+  font-weight: bold;
+}
+
+.columnList {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: #e9e3ff;
+}
+
+.columnList li {
+  margin-bottom: 6px;
+}
+
+.required,
+.optional {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 16px;
+  padding: 0 6px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+}
+
+.required {
+  background: #ffd23f;
+  color: #2b1055;
+}
+
+.optional {
+  border: 1px solid #a78bfa;
+  color: #c4b5fd;
+}
+
+.example {
+  margin: 0;
+  padding: 12px 14px;
+  background: #12062b;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 10px;
+  color: #fff3c4;
+  font-size: 13px;
+  line-height: 20px;
+  overflow-x: auto;
+}
+
+.uploadResults {
+  margin-top: 28px;
+}
+
+.dashHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.dashHeader .sectionTitle {
+  margin-bottom: 4px;
+}
+
+.subTitle {
+  font-family: "Bangers", "Comic Sans MS", cursive;
+  font-weight: normal;
+  letter-spacing: 1.5px;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffd23f;
+  margin: 8px 0 4px;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin: 16px 0 12px;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: none;
+  background: #ffd23f;
+  color: #2b1055;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: #ffbe0b;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ffd23f;
+  border: 2px solid #ffd23f;
+}
+
+.secondaryButton:hover:not(:disabled) {
+  background: #ffd23f;
+  color: #2b1055;
+}
+
+.dangerButton {
+  background: transparent;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
+}
+
+.dangerButton:hover:not(:disabled) {
+  background: #ff6b6b;
+  color: #ffffff;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled,
+.dangerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.textButton {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.progressBox {
+  background: #1e0b3d;
+  border: 1px solid #ffd23f;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.progressText {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.progressTrack {
+  height: 10px;
+  background: rgba(167, 139, 250, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: #ffd23f;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.error,
+.success,
+.info {
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0 0 12px;
+}
+
+.error {
+  background: rgba(255, 107, 107, 0.15);
+  border: 1px solid #ff6b6b;
+  color: #ffd0d0;
+}
+
+.success {
+  background: rgba(255, 210, 63, 0.12);
+  border: 1px solid #ffd23f;
+  color: #fff3c4;
+}
+
+.info {
+  background: rgba(167, 139, 250, 0.15);
+  border: 1px solid #a78bfa;
+  color: #e9e3ff;
+}
+
+/* ---------- Stats ---------- */
+
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.statCard {
+  background: #1e0b3d;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-top: 3px solid #ffd23f;
+  border-radius: 14px;
+  padding: 14px 16px;
+  min-width: 0;
+}
+
+.statLabel {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c4b5fd;
+}
+
+.statValue {
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #f5f3ff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-variant-numeric: tabular-nums;
+}
+
+.statDetail {
+  font-size: 14px;
+  color: #c4b5fd;
+}
+
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.chartSubtitle {
+  margin: 0 0 8px;
+  font-size: 14px;
+  color: #c4b5fd;
+}
+
+.chartBox {
+  position: relative;
+  height: 260px;
+  margin-top: 8px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 48px 16px;
+  background: #1e0b3d;
+  border: 2px dashed rgba(255, 210, 63, 0.5);
+  border-radius: 16px;
+}
+
+.emptyState h3 {
+  margin: 8px 0;
+  color: #ffd23f;
+  font-size: 22px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+}
+
+/* ---------- Table ---------- */
+
+.tableHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.search {
+  padding: 8px 12px;
+  border: 2px solid #7c3aed;
+  border-radius: 10px;
+  background: #12062b;
+  color: #f5f3ff;
+  font-family: inherit;
+  font-size: 15px;
+  min-width: 0;
+  flex: 0 1 260px;
+}
+
+.search:focus {
+  outline: none;
+  border-color: #ffd23f;
+}
+
+.tableWrap {
+  max-height: 480px;
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.table th {
+  position: sticky;
+  top: 0;
+  background: #1e0b3d;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #c4b5fd;
+  padding: 8px;
+  border-bottom: 2px solid #ffd23f;
+}
+
+.table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.18);
+  vertical-align: top;
+}
+
+.topicCell {
+  font-weight: bold;
+  color: #ffd23f;
+  white-space: nowrap;
+}
+
+.jokeCell {
+  white-space: pre-wrap;
+  min-width: 200px;
+}
+
+.rowMeta {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #a78bfa;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #a78bfa;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.deleteButton:hover {
+  color: #ff6b6b;
+  background: rgba(255, 107, 107, 0.12);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+/* ---------- Rating buttons ---------- */
+
+.ratingButtons {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.rateButton {
+  font-size: 16px;
+  line-height: 1;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  filter: grayscale(0.6);
+  transition: transform 0.1s ease;
+}
+
+.compact .rateButton {
+  background: rgba(167, 139, 250, 0.12);
+  border-color: rgba(167, 139, 250, 0.35);
+  padding: 4px 7px;
+}
+
+.rateButton:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+
+.ratedUp,
+.compact .ratedUp {
+  background: #ffd23f;
+  border-color: #e0a800;
+  filter: none;
+}
+
+.ratedDown,
+.compact .ratedDown {
+  background: #ff6b6b;
+  border-color: #e8504f;
+  filter: none;
+}
+
+@media (max-width: 700px) {
+  .chartGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .chartBox {
+    height: 230px;
+  }
+}
+
+.chartNote {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+  color: #c4b5fd;
+  border: 2px dashed rgba(167, 139, 250, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+}

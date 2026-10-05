@@ -1,0 +1,253 @@
+/* Comedy-club theme: dark purple stage, gold spotlight, coral accents */
+
+.page {
+  min-height: 100vh;
+  padding: 40px 16px 0;
+  font-family: "Nunito", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #f5f3ff;
+  background: radial-gradient(ellipse at top, #5b2a86 0%, #2b1055 45%, #12062b 100%);
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  width: 72px;
+  height: 72px;
+  filter: drop-shadow(0 0 18px rgba(255, 210, 63, 0.6));
+}
+
+.heading1 {
+  font-family: "Bangers", "Comic Sans MS", cursive;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 12px 0 0;
+  color: #ffd23f;
+  font-size: 48px;
+  line-height: 52px;
+  text-shadow: 3px 3px 0 #ff6b6b;
+}
+
+.name {
+  text-align: center;
+  font-size: 16px;
+  color: #c4b5fd;
+  margin: 8px 0 12px;
+}
+
+.chatContainer {
+  max-width: 640px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 260px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userMessage,
+.assistantMessage {
+  padding: 12px 16px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.userMessage {
+  align-self: flex-end;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.assistantMessage {
+  align-self: flex-start;
+  background-color: #fff8e1;
+  color: #2b1055;
+  border-bottom-left-radius: 4px;
+  box-shadow: 0 0 20px rgba(255, 210, 63, 0.25);
+}
+
+.typing {
+  font-style: italic;
+  color: #7c6a9a;
+}
+
+.messageInputContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: rgba(18, 6, 43, 0.95);
+  border-top: 2px solid #ffd23f;
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  max-width: 640px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.topicChip {
+  padding: 4px 12px;
+  border: 1px solid #ffd23f;
+  border-radius: 999px;
+  background: transparent;
+  color: #ffd23f;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.topicChip:hover:not(:disabled) {
+  background: #ffd23f;
+  color: #2b1055;
+}
+
+.textarea {
+  box-sizing: border-box;
+  padding: 12px 16px;
+  border: 2px solid #7c3aed;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  width: 100%;
+  min-height: 56px;
+  resize: vertical;
+  background: #1e0b3d;
+  color: #f5f3ff;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.textarea::placeholder {
+  color: #a78bfa;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #ffd23f;
+  box-shadow: 0 0 0 3px rgba(255, 210, 63, 0.3);
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 8px;
+}
+
+.inputSubmit,
+.inputButton {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.inputSubmit {
+  flex: 4;
+  background-color: #ffd23f;
+  color: #2b1055;
+}
+
+.inputSubmit:hover:not(:disabled) {
+  background-color: #ffbe0b;
+}
+
+.inputButton {
+  flex: 1;
+  background-color: transparent;
+  color: #ff6b6b;
+  border: 2px solid #ff6b6b;
+}
+
+.inputButton:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+}
+
+.topicChip:disabled,
+.inputSubmit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Tabs ---------- */
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px auto 16px;
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: 2px solid rgba(255, 210, 63, 0.5);
+  border-radius: 999px;
+  background: rgba(18, 6, 43, 0.6);
+  color: #ffd23f;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab:hover {
+  border-color: #ffd23f;
+}
+
+.activeTab {
+  background: #ffd23f;
+  border-color: #ffd23f;
+  color: #2b1055;
+}
+
+.badge {
+  min-width: 20px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: #ff6b6b;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.rating {
+  margin-top: 8px;
+}
+
+.warning {
+  max-width: 640px;
+  margin: 0 auto 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(255, 107, 107, 0.15);
+  border: 1px solid #ff6b6b;
+  color: #ffd0d0;
+}
